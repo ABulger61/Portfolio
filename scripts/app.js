@@ -1,0 +1,3 @@
+$(document).(function() {
+Hello World!
+});
