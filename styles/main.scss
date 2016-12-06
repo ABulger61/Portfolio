@@ -1,5 +1,6 @@
 $text-color: white;
 $text-highlight: #00E2AC;
+$light-blue: #00CFFF;
 
 .hero {
     font-family: "Roboto", serif;
@@ -59,11 +60,11 @@ $text-highlight: #00E2AC;
     cursor: pointer;
 
     &:hover {
-        background-color: #00CFFF;
+        background-color: $light-blue;
     }
 }
 
-#about {
+#about{
     min-height: 0;
 
     .left-col {
@@ -80,7 +81,6 @@ $text-highlight: #00E2AC;
             line-height: 55px;
         }
     }
-
     .right-col {
         text-align: left;
         padding: 20px;
@@ -91,7 +91,6 @@ $text-highlight: #00E2AC;
         }
     }
 }
-
 #gallery {
     background-color: #EEFDF9;
 
@@ -165,6 +164,93 @@ $text-highlight: #00E2AC;
     margin-left: auto;
     color: $text-highlight;
 }
+
+ #sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    padding-top: 10px;
+
+    font-family: "Roboto", serif;
+    color: $text-color;
+    background-color: black;
+    z-index: 2;
+    overflow: hidden;
+
+    transition: all 0.5s ease;
+
+    h2 {
+     font-size: 40px;
+     line-height: 40px;
+     margin: 4px;
+     padding: 0;
+   }
+
+     a {
+       color: $text-color;
+       font-size: 24px;
+       margin-left: 10px;
+     }
+
+     &.open {
+       width: 320px;
+     }
+
+     .sidebar-links {
+       margin-top: 20px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+     }
+  }
+
+       #close-btn {
+         margin-left: 30px;
+         margin-top: 10px;
+         align-self: flex-start;
+
+         color: $text-color;
+         cursor: pointer;
+
+         &:hover {
+           opacity: 0.5;
+         }
+
+         img {
+           height: 30px;
+           width: 30px;
+         }
+       }
+
+       #hamburger {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         position: fixed;
+         height: 34px;
+         width: 40px;
+         left: 30px;
+         top: 20px;
+
+         border-radius: 4px;
+         background-color: black;
+         z-index: 1;
+
+         &:hover {
+           background-color: $light-blue;
+         }
+
+         img {
+           height: 30px;
+           width: 30px;
+         }
+       }
+
 @media only screen and (max-width: 480px) {
     #intro {
         min-height: 640px;
