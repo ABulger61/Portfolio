@@ -37,7 +37,7 @@ $(document)
 
         $.ajax({
 
-          url : "http://api.wunderground.com/api/b8da38a9149c090b/geolookup/conditions/q/44107.json",
+          url : "https://api.wunderground.com/api/b8da38a9149c090b/geolookup/conditions/q/44107.json",
           dataType : "jsonp",
           success : function(parsed_json) {
 
